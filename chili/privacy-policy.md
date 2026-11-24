@@ -9,21 +9,25 @@ title: Chi Li – Chính sách quyền riêng tư / Privacy Policy
 
 [Tiếng Việt](#tiếng-việt) · [English](#english)
 
-Ngày hiệu lực / Effective date: 09/11/2026
+Ngày hiệu lực / Effective date: 24/11/2026 (Chi Li v1.3.0)
 
 ## Tiếng Việt
 
-Chi Li là ứng dụng ghi chép thu chi cá nhân, hoạt động hoàn toàn trên điện thoại của bạn.
+Chi Li là ứng dụng ghi chép thu chi cá nhân, lưu sổ thu chi trên điện thoại của bạn và cho phép bạn chủ động gửi báo lỗi.
 
 **Dữ liệu ứng dụng lưu trữ**
 - Các giao dịch bạn nhập (số tiền, danh mục, ngày, ghi chú), danh mục của bạn và các cài đặt của ứng dụng.
 - Tất cả được lưu trong bộ nhớ riêng của ứng dụng trên thiết bị của bạn.
 
-**Chúng tôi không thu thập hay chia sẻ dữ liệu**
-- Ứng dụng không có quyền truy cập Internet và không gửi dữ liệu tới máy chủ của nhà phát triển. Bạn có thể chủ động xuất dữ liệu ra file như mô tả bên dưới.
+**Báo lỗi và dịch vụ xử lý**
+- Chỉ khi bạn nhấn Gửi, báo cáo được gửi qua kết nối mã hóa tới Firebase Cloud Firestore của Google để hỗ trợ và khắc phục lỗi. Báo cáo gồm mã UUID ngẫu nhiên, mô tả do bạn nhập (tối đa 2.000 đơn vị UTF-16), phiên bản và số bản dựng ứng dụng, phiên bản Android, mẫu thiết bị và thời gian tạo do máy chủ ghi. Đừng nhập thông tin cá nhân hay tài chính vào mô tả.
+- Phần đính kèm chẩn đoán mặc định tắt; bạn có thể xem trước và chọn gửi tối đa 30 mã sự kiện cho phép cùng thời gian tương đối. Các sự kiện không dự kiến chứa số tiền, ghi chú, ngày giao dịch, tên danh mục hoặc đường dẫn file. Sổ thu chi không thuộc nội dung báo cáo, nhưng văn bản tự nhập có thể chứa thông tin riêng tư.
+- Firebase Firestore và App Check xử lý thông tin tác nhân Firebase (thông tin hệ điều hành/thiết bị, trình cài đặt và phiên bản SDK) để cung cấp, duy trì và cải thiện dịch vụ. App Check sử dụng mã Play Integrity để bảo vệ dịch vụ khỏi lạm dụng. Play Integrity xử lý dữ liệu xác minh ứng dụng, giấy phép và thiết bị, gồm hash/nonce yêu cầu, gói, phiên bản, chứng chỉ ký, trạng thái giấy phép và dữ liệu chứng thực thiết bị; Google xử lý theo thời hạn lưu riêng của họ. Xem [Firebase](https://firebase.google.com/docs/android/play-data-disclosure) và [Play Integrity](https://developer.android.com/google/play/integrity/terms).
+- Quyền xem và xóa báo cáo được dành cho người phụ trách hỗ trợ được ủy quyền. Quy tắc Firestore không cho ứng dụng đọc báo cáo đã gửi. Chúng tôi lưu báo cáo trong 90 ngày kể từ thời điểm máy chủ ghi nhận, sau đó xóa báo cáo. Bạn có thể liên hệ địa chỉ bên dưới để yêu cầu xóa báo cáo; cung cấp mã tham chiếu nếu có. Xóa ứng dụng không tự xóa báo cáo đã gửi.
+
+**Tài khoản và quảng cáo**
 - Không cần tài khoản, không đăng nhập.
 - Không có quảng cáo, công cụ phân tích hay theo dõi, hoặc SDK phục vụ các mục đích này.
-- Nhà phát triển không thể xem dữ liệu của bạn.
 
 **Sao lưu và khôi phục bằng file**
 - Khi bạn chọn xuất bản sao lưu, Chi Li ghi toàn bộ danh mục và giao dịch (bao gồm số tiền, ngày và ghi chú) vào một file JSON ở vị trí bạn chọn qua trình chọn file của Android. File không chứa cài đặt ứng dụng.
@@ -50,17 +54,21 @@ Chi Li là ứng dụng ghi chép thu chi cá nhân, hoạt động hoàn toàn 
 
 ## English
 
-Chi Li is a personal income and expense notebook that works entirely on your phone.
+Chi Li is a personal income and expense notebook that stores your notebook on your phone and lets you choose to send a bug report.
 
 **Data the app stores**
 - The transactions you enter (amount, category, date, note), your categories and the app's settings.
 - All of it stays in the app's private storage on your device.
 
-**We do not collect or share data**
-- The app has no Internet permission and does not send data to developer servers. You can choose to export data to a file as described below.
+**Bug reports and service processing**
+- Only when you press Send, a report is transmitted over an encrypted connection to Google's Firebase Cloud Firestore for support and troubleshooting. It contains a random UUID, your description (up to 2,000 UTF-16 units), app version and build number, Android version, device model and a server creation timestamp. Please leave personal and financial details out of your description.
+- The diagnostic attachment is off by default; you can preview and choose to send up to 30 allowlisted event codes with relative times. These events are not intended to contain amounts, notes, transaction dates, category names or file paths. The notebook is not included in the report, although free text can contain private information.
+- Firebase Firestore and App Check process the Firebase user agent (OS/device information, installer and SDK versions) to provide, maintain and improve their services. App Check uses a Play Integrity token to protect the service from abuse. Play Integrity processes app, licensing and device verification data including request hash/nonce, package, version, signing certificate, license status and device attestation data; Google applies its own retention period. See [Firebase](https://firebase.google.com/docs/android/play-data-disclosure) and [Play Integrity](https://developer.android.com/google/play/integrity/terms).
+- Only authorized support operators have permission to view and delete reports. Firestore rules deny the app access to read submitted reports. We retain reports for 90 days from the server-recorded submission time and then delete them. Contact us below to request deletion, supplying the reference if available. Uninstalling the app does not automatically delete a submitted report.
+
+**Accounts and advertising**
 - No account and no sign-in.
 - No ads, analytics or tracking, or SDKs for those purposes.
-- The developer cannot see your data.
 
 **File backup and restore**
 - When you choose to export a backup, Chi Li writes all categories and transactions (including amounts, dates and notes) to a JSON file at the location you select through Android's system file picker. App settings are not included.
